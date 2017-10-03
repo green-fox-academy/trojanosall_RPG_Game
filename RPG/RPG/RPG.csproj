@@ -94,5 +94,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="asset\boss.png" />
+    <Resource Include="asset\floor-map.png" />
+    <Resource Include="asset\floor.png" />
+    <Resource Include="asset\full-map.png" />
+    <Resource Include="asset\hero-down.png" />
+    <Resource Include="asset\hero-left.png" />
+    <Resource Include="asset\hero-map.png" />
+    <Resource Include="asset\hero-right.png" />
+    <Resource Include="asset\hero-up.png" />
+    <Resource Include="asset\skeleton.png" />
+    <Resource Include="asset\wall.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

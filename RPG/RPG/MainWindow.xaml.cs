@@ -24,6 +24,9 @@ namespace RPG
         public MainWindow()
         {
             InitializeComponent();
+            var foxDraw = new FoxDraw(canvas);
+
+            foxDraw.AddImage("./asset/floor.png", 0, 0);
         }
     }
 }
