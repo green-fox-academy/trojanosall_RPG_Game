@@ -26,11 +26,13 @@ namespace RPG
             InitializeComponent();
             var foxDraw = new FoxDraw(canvas);
 
-            Area area = new Area(11,10,50);
+            Area area = new Area(11, 10, 50);
 
             area.DrawArea(foxDraw);
 
             foxDraw.AddImage("./asset/hero-down.png", 0, 0);
         }
+
     }
 }
+
