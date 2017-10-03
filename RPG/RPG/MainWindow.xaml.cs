@@ -26,7 +26,14 @@ namespace RPG
             InitializeComponent();
             var foxDraw = new FoxDraw(canvas);
 
-            foxDraw.AddImage("./asset/floor.png", 0, 0);
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 11; j++)
+                {
+                    foxDraw.AddImage("./asset/floor.png", i * 50, j * 50);
+                }
+            }
+            
         }
     }
 }
