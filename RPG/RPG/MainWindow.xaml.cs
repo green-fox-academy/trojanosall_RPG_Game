@@ -23,7 +23,9 @@ namespace RPG
     {
         private Hero hero;
         private Area area = new Area(11, 10, 50);
+        private Skeleton skeleton;
 
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -34,6 +36,9 @@ namespace RPG
             area.DrawArea(foxDraw);
 
             Hero.SetHero(foxDraw);
+            Skeleton.SetSkeleton(foxDraw);
+
+            Skeleton.SetSkeleton(foxDraw);
 
         }
 
