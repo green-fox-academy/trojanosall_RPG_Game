@@ -26,26 +26,54 @@ namespace RPG
 
         public static void MoveRight(FoxDraw foxDraw)
         {
-            foxDraw.AddImage("./asset/hero-right.png", XCoordinate + SideOfTile, YCoordinate);
-            XCoordinate += SideOfTile;
+            if (XCoordinate < 450)
+            {
+                foxDraw.AddImage("./asset/hero-right.png", XCoordinate + SideOfTile, YCoordinate);
+                XCoordinate += SideOfTile;
+            }
+            else
+            {
+                foxDraw.AddImage("./asset/hero-right.png", XCoordinate, YCoordinate);
+            }
         }
 
         public static void MoveLeft(FoxDraw foxDraw)
         {
-            foxDraw.AddImage("./asset/hero-left.png", XCoordinate - SideOfTile, YCoordinate);
-            XCoordinate -= SideOfTile;
+            if (XCoordinate >= 50)
+            {
+                foxDraw.AddImage("./asset/hero-left.png", XCoordinate - SideOfTile, YCoordinate);
+                XCoordinate -= SideOfTile;
+            }
+            else
+            {
+                foxDraw.AddImage("./asset/hero-right.png", XCoordinate, YCoordinate);
+            }
         }
 
         public static void MoveDown(FoxDraw foxDraw)
         {
-            foxDraw.AddImage("./asset/hero-down.png", XCoordinate, YCoordinate + 50);
-            YCoordinate += SideOfTile;
+            if (YCoordinate <= 450)
+            {
+                foxDraw.AddImage("./asset/hero-down.png", XCoordinate, YCoordinate + 50);
+                YCoordinate += SideOfTile;
+            }
+            else
+            {
+                foxDraw.AddImage("./asset/hero-right.png", XCoordinate, YCoordinate);
+            }
         }
 
         public static void MoveUp(FoxDraw foxDraw)
         {
-            foxDraw.AddImage("./asset/hero-up.png", XCoordinate, YCoordinate - 50);
-            YCoordinate -= SideOfTile;
+            if (YCoordinate >= 50)
+            {
+                foxDraw.AddImage("./asset/hero-up.png", XCoordinate, YCoordinate - 50);
+                YCoordinate -= SideOfTile;
+            }
+            else
+            {
+                foxDraw.AddImage("./asset/hero-right.png", XCoordinate, YCoordinate);
+            }
         }
     }
 }

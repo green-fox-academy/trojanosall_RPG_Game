@@ -40,7 +40,7 @@ namespace RPG
         private void WindowKeyDown(object sender, KeyEventArgs e)
         {
             var foxDraw = new FoxDraw(canvas);
-            //area.DrawArea(foxDraw);
+            area.DrawArea(foxDraw);
 
             if (e.Key == Key.Left)
             {
