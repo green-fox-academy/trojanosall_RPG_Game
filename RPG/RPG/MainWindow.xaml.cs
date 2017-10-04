@@ -21,16 +21,47 @@ namespace RPG
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Hero hero;
+        private Area area = new Area(11, 10, 50);
+
         public MainWindow()
         {
             InitializeComponent();
             var foxDraw = new FoxDraw(canvas);
 
-            Area area = new Area(11, 10, 50);
+            //Area area = new Area(11, 10, 50);
 
             area.DrawArea(foxDraw);
 
-            foxDraw.AddImage("./asset/hero-down.png", 0, 0);
+            Hero.SetHero(foxDraw);
+
+        }
+
+        private void WindowKeyDown(object sender, KeyEventArgs e)
+        {
+            var foxDraw = new FoxDraw(canvas);
+            area.DrawArea(foxDraw);
+
+            if (e.Key == Key.Left)
+            {
+                Hero.MoveLeft(foxDraw);
+            }
+
+            if (e.Key == Key.Right)
+            {
+                Hero.MoveRight(foxDraw);
+            }
+
+            if (e.Key == Key.Up)
+            {
+                Hero.MoveUp(foxDraw);
+            }
+
+            if (e.Key == Key.Down)
+            {
+                Hero.MoveDown(foxDraw);
+            }
+
         }
 
     }
