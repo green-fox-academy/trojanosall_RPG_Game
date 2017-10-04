@@ -26,7 +26,7 @@ namespace RPG
 
         public static void MoveRight(FoxDraw foxDraw)
         {
-            if (XCoordinate < 450 && YCoordinate == 150 || YCoordinate == 300)
+            if (XCoordinate < 450 && (YCoordinate == 150 || YCoordinate == 300))
             {
                 foxDraw.AddImage("./asset/hero-right.png", XCoordinate + SideOfTile, YCoordinate);
                 XCoordinate += SideOfTile;
@@ -39,7 +39,7 @@ namespace RPG
 
         public static void MoveLeft(FoxDraw foxDraw)
         {
-            if (XCoordinate >= 50 && YCoordinate == 150 || YCoordinate == 300)
+            if (XCoordinate >= 50 && (YCoordinate == 150 || YCoordinate == 300))
             {
                 foxDraw.AddImage("./asset/hero-left.png", XCoordinate - SideOfTile, YCoordinate);
                 XCoordinate -= SideOfTile;
@@ -52,7 +52,7 @@ namespace RPG
 
         public static void MoveDown(FoxDraw foxDraw)
         {
-            if (YCoordinate <= 450 && XCoordinate == 0 || XCoordinate == 150 || XCoordinate == 300)
+            if (YCoordinate <= 450 && (XCoordinate == 0 || XCoordinate == 150 || XCoordinate == 300))
             {
                 foxDraw.AddImage("./asset/hero-down.png", XCoordinate, YCoordinate + 50);
                 YCoordinate += SideOfTile;
@@ -65,7 +65,7 @@ namespace RPG
 
         public static void MoveUp(FoxDraw foxDraw)
         {
-            if (YCoordinate >= 50 && XCoordinate == 0 || XCoordinate == 150 || XCoordinate == 300)
+            if (YCoordinate >= 50 && (XCoordinate == 0 || XCoordinate == 150 || XCoordinate == 300))
             {
                 foxDraw.AddImage("./asset/hero-up.png", XCoordinate, YCoordinate - 50);
                 YCoordinate -= SideOfTile;
